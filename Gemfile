@@ -45,3 +45,8 @@ group :development do
   gem 'spring'
 end
 
+group :production do
+  gem 'sqlite3'
+  gem 'rails_12factor'
+end
+
