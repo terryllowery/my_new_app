@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Products</h1>
-<div class="container-fluid">
-    <table>
+<div class="container">
+    <table class="product-table">
       <thead>
         <tr>
           <th>Name</th>
@@ -11,18 +11,20 @@
           <th colspan="3"></th>
         </tr>
       </thead>
-
       <tbody>
         <% @products.each do |product| %>
           <tr>
-            <td><%= product.name %></td>
-            <td><%= product.description %></td>
-            <td><%= product.image_url %></td>
-            <td><%= link_to 'Show', product %></td>
-            <td><%= link_to 'Edit', edit_product_path(product) %></td>
-            <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td class="product-table data"><%= product.name %></td>
+            <td class="product-table data"><%= product.description %></td>
+            <td class="product-table data"><%= product.image_url %></td>
+            <td class="product-table links"><%= link_to 'Show', product %></td>
+            <td class="product-table links"><%= link_to 'Edit', edit_product_path(product) %></td>
+            <td class="product-table links"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+
           </tr>
+
         <% end %>
+
       </tbody>
     </table>
 </div>
