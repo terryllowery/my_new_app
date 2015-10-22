@@ -4,19 +4,21 @@
 <div class="container">
     <table class="product-table">
       <thead>
-        <tr>
+        <tr class="row">
           <th>Name</th>
           <th>Description</th>
           <th>Image url</th>
+          <th>Color</th>
           <th class="links" colspan="3"></th>
         </tr>
       </thead>
       <tbody>
         <% @products.each do |product| %>
-          <tr>
+          <tr class="row">
             <td class="product-table data"><%= product.name %></td>
             <td class="product-table data"><%= product.description %></td>
             <td class="product-table data"><%= product.image_url %></td>
+            <td class="product-table data"><%= product.colour %></td>
             <td class="links"><%= link_to 'Show', product %></td>
             <td class="links"><%= link_to 'Edit', edit_product_path(product) %></td>
             <td class="links"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
