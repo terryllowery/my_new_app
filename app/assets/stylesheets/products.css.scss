@@ -1,17 +1,20 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap";
+$table-padding: 20px;
+$links-padding: 3px!important;
 
 .product-table {
   width: 100%;
+  th, td {
+    padding-right: $table-padding;
+  }
   th {
     background-color: rgb(153, 204, 255);
-    padding: 0px 20px 0px 0px;
   }
-  .data td {
-    padding: 20px!important;
-  }
-  .links td {
-    padding: 1px!important;
-  }
+
+}
+.links th, td {
+  padding: $links-padding;
 }
