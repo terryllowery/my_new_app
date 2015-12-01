@@ -2,10 +2,6 @@ class StaticPagesController < ApplicationController
   def index
   end
   def landing_page
-    if Product.first
-      @featured_product = Product.first
-    else
-      @featured_product = nil
-    end
+      @products = Product.limit(3)
   end
 end

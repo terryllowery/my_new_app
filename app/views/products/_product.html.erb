@@ -1,0 +1,12 @@
+<tr class="row">
+<td class="product-table data col-md-2"><%= product.name %></td>
+<td class="product-table data col-md-6"><%= product.description %></td>
+<td class="product-table data col-md-1"><%= product.image_url %></td>
+<td class="product-table data col-md-1"><%= product.colour %></td>
+<td class="product-table data col-md-1">$<%= product.price %></td>
+<div class="col-md-1">
+  <td class="links"><%= link_to 'Show', product %></td>
+  <td class="links"><%= link_to 'Edit', edit_product_path(product) %></td>
+  <td class="links"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</div>
+</tr>
